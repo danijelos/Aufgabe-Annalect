@@ -12,8 +12,9 @@ To use this project, follow these steps:
 2. Clone the repository to your local machine
 3. Navigate to the project directory: cd your_repository
 4. Install the necessary dependencies: pip install -r requirements.txt
+5. To test the functionality adjust the "load JSON" in the flask_call.ipynb with your own repository and data
 
-##Project Incremental Steps
+## Project Incremental Steps
 1. Flask App Setup:
 - Created a Flask app (flask_backend.py) with a simple x^2 method to test Flask functionality.
 - Developed a Jupyter notebook (flask_call.ipynb) to make a POST request and verify the correct result.
