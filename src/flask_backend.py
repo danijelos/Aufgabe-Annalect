@@ -7,7 +7,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 # Implement Semantic Text Similarity Class
-# implement Classifier
 # The SentenceBERT model is used which is a modification of BERT that was developed especially for text similarity tasks
 # It is much faster than BERT and thus more scalable
 class STS():
@@ -45,7 +44,8 @@ def post():
     target_df = pd.DataFrame(test_audiences)
 
     # Read in the source_segment data and generate dataframe
-    df = pd.read_csv("~/anaconda3/envs/daniel_dev/git/data/source_segments_angepasst.csv", encoding = "ISO-8859-1", sep=';')
+    #df = pd.read_csv("~/anaconda3/envs/daniel_dev/git/data/source_segments_angepasst.csv", encoding = "ISO-8859-1", sep=';')
+    df = pd.read_csv("/app/data/source_segments_angepasst.csv", encoding = "ISO-8859-1", sep=';')
     df.drop(columns=['Unnamed: 5'], inplace=True)
     source_df = df.copy()
 
@@ -55,12 +55,13 @@ def post():
 
     # Store the sentences in a list of dictionaries
     results = []
+    threshold = 0.3
     # Iterate through target_df and store similarity results in a list of dictionaries
     # use i to iterate through the target_df
     i = 0
     for idx in max_similarities_idx:
         result = {}
-        if idx in source_df.index:
+        if float(max_similarities[i]) >= threshold and idx in source_df.index:
             # Search for label_id_long, segment_description, and label_name in the source_df to output which segment has the highest similarity
             label_id = source_df.loc[idx, 'label_id_long']
             label_description = source_df.loc[idx, 'segment_description']
@@ -89,6 +90,6 @@ def post():
 
 if __name__ == "__main__":
     ## Uncomment for flask only (no docker container)
-    app.run(port=5000,debug=True)
+    #app.run(port=5000,debug=True)
     ## Comment out for flask only (no docker container)
-     #app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080)

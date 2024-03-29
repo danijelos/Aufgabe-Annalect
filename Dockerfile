@@ -6,6 +6,8 @@ WORKDIR /src/flask_backend
 
 # copy requirements.txt
 COPY ./requirements.txt /src/flask_backend/requirements.txt
+# Copy the CSV file from the local filesystem to the Docker container
+COPY ./data/source_segments_angepasst.csv /app/data/source_segments_angepasst.csv
 
 # install system dependencies
 RUN apt-get update \
