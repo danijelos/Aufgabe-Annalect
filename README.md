@@ -12,7 +12,12 @@ To use this project, follow these steps:
 2. Clone the repository to your local machine
 3. Navigate to the project directory: cd your_repository
 4. Install the necessary dependencies: pip install -r requirements.txt
-5. To test the functionality open a terminal, navigate to the project directory and type: "docker build --tag <your_name> .". Adjust the "load JSON" in the flask_call.ipynb with your own repository and data to test the API.
+5. To test the functionality:
+- open a terminal, navigate to the project directory and type
+-> "pip freeze > requirements.txt"
+-> "docker build --tag <your_name> ."
+-> "docker run -p 8080:8080 <your_name>:latest
+-> Adjust the "load JSON" in the flask_call.ipynb with your own repository and data to test the API
 
 ## Project Incremental Steps
 1. Flask App Setup:
@@ -31,5 +36,5 @@ To use this project, follow these steps:
 - Loaded source_segment.csv in the backend (flask_backend.py).
 - Provided JSON test files with the request for comparison in the flask_call.ipynb.
 5. Containerization of New Logic:
-- Containerized the updated logic, but encountered long loading times during containerization (up to 25 minutes).
+- Containerized the updated logic, but encountered long loading times during containerization (up to 40 minutes).
 - Copied source_segmentation.csv into the container for accessibility.
