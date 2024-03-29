@@ -5,8 +5,11 @@
 This repository contains a Flask-based Python API utilizing Docker containers for deployment. The main functionality involves semantic text similarity comparison between target segment descriptions and source segment label names. The project utilizes SentenceBERT embeddings for text representation and cosine similarity for comparison.
 
 ## Setup
+In the src-Folder you find the code and in the data-Folder the data.
+To work with the Container the following files are needed: flask_backend.py, Dockerfile, source_segments_angepasst.csv, and requirements.txt.
+To test the program use the: flask_call.ipynb to make a test request, which uses the test_audiences.json data
 
-To use this project, follow these steps:
+## To use this project, follow these steps:
 
 1. Adjust the `source_segments.csv` file by removing the '|' and ',' characters to ensure smooth loading of the CSV file.
 2. Clone the repository to your local machine
