@@ -18,6 +18,7 @@ To use this project, follow these steps:
 -> "docker build --tag <your_name> ."
 -> "docker run -p 8080:8080 <your_name>:latest
 -> Adjust the "load JSON" in the flask_call.ipynb with your own repository and data to test the API
+-> Test the program with the flask_call.ipynb file
 
 ## Project Incremental Steps
 1. Flask App Setup:
@@ -36,5 +37,5 @@ To use this project, follow these steps:
 - Loaded source_segment.csv in the backend (flask_backend.py).
 - Provided JSON test files with the request for comparison in the flask_call.ipynb.
 5. Containerization of New Logic:
-- Containerized the updated logic, but encountered long loading times during containerization (up to 40 minutes).
+- Containerized the updated logic.
 - Copied source_segmentation.csv into the container for accessibility.
