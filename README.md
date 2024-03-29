@@ -12,7 +12,7 @@ To use this project, follow these steps:
 2. Clone the repository to your local machine
 3. Navigate to the project directory: cd your_repository
 4. Install the necessary dependencies: pip install -r requirements.txt
-5. To test the functionality adjust the "load JSON" in the flask_call.ipynb with your own repository and data
+5. To test the functionality open a terminal, navigate to the project directory and type: "docker build --tag <your_name> .". Adjust the "load JSON" in the flask_call.ipynb with your own repository and data to test the API.
 
 ## Project Incremental Steps
 1. Flask App Setup:
@@ -26,6 +26,8 @@ To use this project, follow these steps:
 - Compared target segment embedding with every source segment embedding using cosine similarity and output the segment with the highest similarity.
 4. Integration with Flask Backend:
 - Integrated the semantic text similarity logic from text_similarity_test.ipynb into flask_backend.py.
+- Chose 0.3 similarity score as a threshold, because even with 0.328 score the findings were okay:
+{"Target Segment": 7, "Target Description": "HDGQ Branche/Industrie: automobil/fahrzeugbau/maschinenbau extended", "Source Segment": 20403070000, "Source Description": "interest in business and finance topics", "Source Label Name": "Interest  Business and Finance  Industries  Civil Engineering Industry", "Cosine Similarity Score": 0.32770323753356934},
 - Loaded source_segment.csv in the backend (flask_backend.py).
 - Provided JSON test files with the request for comparison in the flask_call.ipynb.
 5. Containerization of New Logic:
