@@ -19,6 +19,6 @@ def post():
 
 if __name__ == "__main__":
     ## Uncomment for flask only (no docker container)
-    app.run(port=5000,debug=True)
+    #app.run(port=5000,debug=True)
     ## Comment out for flask only (no docker container)
-    # app.run(host="0.0.0.0", port=8080)
+     app.run(host="0.0.0.0", port=8080)
