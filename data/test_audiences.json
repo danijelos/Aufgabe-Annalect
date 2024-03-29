@@ -1,0 +1,36 @@
+{
+    "test_audiences": [
+        {
+            "segment_id": 1,
+            "description": "PartnerSolutions > 208838 > Interest > Home & Garden > Home Appliances > Kitchenware"
+        },
+        {
+            "segment_id": 2,
+            "description": "PartnerSolutions > 208758 > Interest > Sports > Football > Bayern Munich"
+        },
+        {
+            "segment_id": 3,
+            "description": "Technology & Computing - MediaGroup DACH - Industrie 4.0 / Industry 4.0"
+        },
+        {
+            "segment_id": 4,
+            "description": "Media & Enertainment - MediaGroup DACH - Movies / Action"
+        },
+        {
+            "segment_id": 5,
+            "description": "letriq age: 18-19 @adality"
+        },
+        {
+            "segment_id": 6,
+            "description": "letriq age: females @adality"
+        },
+        {
+            "segment_id": 7,
+            "description": "HDGQ Branche/Industrie: automobil/fahrzeugbau/maschinenbau extended"
+        },
+        {
+            "segment_id": 8,
+            "description": "HDGQ Branche/Industrie: Finanzservices/Banken/Privatbanken extended"
+        }
+    ]
+}
